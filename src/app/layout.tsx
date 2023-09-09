@@ -1,10 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Josefin_Sans } from 'next/font/google'
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: '100'
+const josefin_Sans = Josefin_Sans({
+  subsets: ['latin']
 })
 
 export const metadata: Metadata = {
@@ -22,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={poppins.className}>{children}</body>
+      <body className={josefin_Sans.className}>{children}</body>
     </html>
   )
 }
