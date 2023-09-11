@@ -22,8 +22,8 @@ export const ActiveLink = ({href, children, className}: Props) => {
     <Link
       className={
         clsx(
-          isActive ? 'border-b-2 border-black' : '',
-          'py-2',
+          isActive ? 'bg-slate-100' : '',
+          'p-3 rounded hover:bg-slate-100 animate',
           className
         )
       }

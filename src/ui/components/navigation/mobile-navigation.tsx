@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { Container } from "../container/container"
 import { Typography } from "@/ui/design-system/typography/typography"
-import { Button } from "@/ui/design-system/button/button"
+import { Button } from '@/components/ui/button'
 import Link from "next/link"
 import { ActiveLink } from "./active-link"
 import clsx from 'clsx'
@@ -20,15 +20,13 @@ export const MobileNavigation = ({ className }: Props) => {
     <header
       className={
         clsx(
-          "z-[100] fixed top-0 left-0 right-0 border-b-2 border-gray-100 bg-white",
+          "z-[100] fixed top-0 left-0 right-0 border-b-[1px] border-slate-50 bg-white",
           className
         )
       }
     >
       <Container className="flex flex-row items-center justify-between gap-3">
-        <div className="">
-          <Typography component="h1" className="font-bold text-3xl"><Link href="/">L2FED</Link></Typography>
-        </div>
+        <Typography component="h1" className="font-bold text-3xl"><Link href="/">L2FED</Link></Typography>
     
         {/* Burger Button Menu */}
         <button
@@ -49,16 +47,16 @@ export const MobileNavigation = ({ className }: Props) => {
         </button>
         {/* Mobile Menu */}
         <div 
-          className=
-            {
-              navbarOpen ? 
-                'md:hidden px-4 absolute block h-[90vh] w-[80vw] z-[100] pt-2 top-[8vh] right-0 bg-gray-50 animate'
-              :
-                'md:hidden px-4 absolute block h-[90vh] w-[80vw] z-[100] pt-2 top-[8vh] right-[-80vw] bg-gray-50 animate'
-            }
+          className={
+            clsx(
+              navbarOpen ? 'right-0' : ' right-[-80vw] ',
+              'md:hidden border-l-[1px] border-slate-50 px-4 absolute block h-[90vh] w-[80vw] z-[100] pt-6 top-[8vh] bg-white animate'
+            )
+          }
         >
           <nav className="flex flex-col items-start gap-6">
             <Typography component="span"><ActiveLink href="/">Générer le QR code</ActiveLink></Typography>
+            <Typography component="span"><ActiveLink href="/recover-qrcode">Récupérer le QR code</ActiveLink></Typography>
             <Button><Link href="/admin">Checker le QR code</Link></Button>
           </nav>
         </div>

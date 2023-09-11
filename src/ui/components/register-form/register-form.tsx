@@ -30,7 +30,7 @@ export const RegisterForm = ({}: Props) => {
       })
       .max(50),
     phonenumber: z.string()
-      .regex(new RegExp('^(8|9)[0-9]{8}$'), {
+      .regex(new RegExp('^0(8|9)[0-9]{8}$'), {
         message: "Veuillez entrer un numero de telephone valide"
       })
   })
@@ -56,7 +56,7 @@ export const RegisterForm = ({}: Props) => {
           name="firstname"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Prenom</FormLabel>
+              <FormLabel>Prénom</FormLabel>
               <FormControl>
                 <Input placeholder="John" {...field} />
               </FormControl>
@@ -82,15 +82,18 @@ export const RegisterForm = ({}: Props) => {
           name="phonenumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Numero de telephone</FormLabel>
+              <FormLabel>Numéro de téléphone</FormLabel>
               <FormControl>
-                <Input placeholder="(8 ou 9)** *** ***" {...field} />
+                <Input placeholder="(08 ou 09)** *** ***" {...field} />
               </FormControl>
+              <FormDescription>
+                Votre numero doit commencer par 0
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Enregistrez et téléchargez le QR Code</Button>
       </form>
     </Form>
   )
