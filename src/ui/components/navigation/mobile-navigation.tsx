@@ -25,7 +25,7 @@ export const MobileNavigation = ({ className }: Props) => {
         )
       }
     >
-      <Container className="flex flex-row items-center justify-between gap-3 px-4">
+      <Container className="flex flex-row items-center justify-between gap-3">
         <div className="">
           <Typography component="h1" className="font-bold text-3xl"><Link href="/">L2FED</Link></Typography>
         </div>

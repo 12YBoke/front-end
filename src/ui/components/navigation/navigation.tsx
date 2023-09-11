@@ -16,7 +16,6 @@ export const Navigation = ({ className }: Props) => {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
 
-
   return(
     <header 
       className={
