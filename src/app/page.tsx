@@ -1,9 +1,10 @@
-import { Navigation } from "@/ui/components/navigation/navigation";
+'use client'
 
 export default function Home() {
+
   return (
     <>
-      <Navigation/>
+    ACCEUIL INDEX
     </>
   )
 }

@@ -2,3 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply mt-[9vh] md:mt-[10vh]
+}
+
+.animate{
+  transition: all .25s ease-in-out
+}
+
+/* Bouton burger (Menu pour mobile) */
+.burger {
+  @apply relative w-[30px] h-[20px] bg-transparent cursor-pointer block;
+}
+
+.burger span {
+  @apply block absolute h-[2.5px] w-full bg-black rounded-[9px] opacity-100 left-0 ;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  @apply top-0;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  @apply top-[50%];
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  @apply top-[100%];
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger.active > span:nth-of-type(1) {
+  @apply top-0 left-[5px];
+  transform: rotate(45deg);
+}
+
+.burger.active > span:nth-of-type(2) {
+  @apply w-0 opacity-0;
+}
+
+.burger.active > span:nth-of-type(3) {
+  @apply top-[21px] left-[5px];
+  transform: rotate(-45deg);
+}
