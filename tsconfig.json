@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/config/supabaseClient.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/config/supabaseClient.js", "src/utils/download-img.js", "src/lib/qrcode/qrcode.js", "src/lib/crypto/crypto.js"],
   "exclude": ["node_modules"]
 }

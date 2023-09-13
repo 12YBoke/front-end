@@ -9,6 +9,7 @@ import { useToast } from "@/components/ui/use-toast"
 import { RegisterFormFieldsType } from "@/types/forms"
 import { registerData } from '@/api/register-data'
 import { InputField } from "@/ui/components/input-field/input-field"
+import { Qrcode } from "@/lib/qrcode/qrcode"
 
 export const RegisterForm = () => {
   const { toast } = useToast()
@@ -48,6 +49,7 @@ export const RegisterForm = () => {
         description: "Vos informations ont bien ete enregistré. Téléchargement du QR Code en cours.",
         className: "bg-green-200 border-green-100"
       })
+      Qrcode(firstname, lastname, phonenumber)
     }
   }
   
