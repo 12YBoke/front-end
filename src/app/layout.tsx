@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
 import { MobileNavigation } from '@/ui/components/navigation/mobile-navigation'
+import { Toaster } from '@/components/ui/toaster'
 
 const josefin_Sans = Josefin_Sans({
   subsets: ['latin']
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Navigation className='hidden md:block'/>
         <MobileNavigation className='md:hidden'/>
         {children}
+        <Toaster/>
       </body>
     </html>
   )

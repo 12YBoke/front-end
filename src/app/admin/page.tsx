@@ -1,4 +1,4 @@
-import { Typography } from "@/ui/design-system/typography/typography";
+import { Typography } from "@/ui/components/typography/typography";
 
 export default function Home() {
   return (

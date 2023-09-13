@@ -1,11 +1,11 @@
 'use client'
 
 import { Container } from "@/ui/components/container/container"
-import { RegisterForm } from "@/ui/components/register-form/register-form"
-import { Typography } from "@/ui/design-system/typography/typography"
+import { RegisterForm } from "@/ui/modules/register-form/register-form"
+import { Typography } from "@/ui/components/typography/typography"
 import Image from "next/image"
 import Link from "next/link"
-import l2fed from "../../public/assets/images/l2fed.jpeg"
+import l2fed from "../../public/assets/images/l2fed.png"
 
 export default function Home() {
 
@@ -37,11 +37,12 @@ export default function Home() {
             </Typography>
           </Container>
         </div>
-        <div className="md:flex-1 md:h-[89vh] flex flex-col md:justify-center">
+        <div className="md:flex-1 md:h-[89vh] flex md:flex-col md:justify-center items-center">
           <Container>
             <Image
               src={l2fed}
               alt="qrcode l2fed url address"
+              className="w-[100%]"
             />
           </Container>
         </div>

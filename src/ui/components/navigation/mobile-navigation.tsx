@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { Container } from "../container/container"
-import { Typography } from "@/ui/design-system/typography/typography"
+import { Typography } from "@/ui/components/typography/typography"
 import { Button } from '@/components/ui/button'
 import Link from "next/link"
 import { ActiveLink } from "./active-link"

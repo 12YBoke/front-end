@@ -1,7 +1,7 @@
 'use client'
 
 import { Container } from "../container/container"
-import { Typography } from "@/ui/design-system/typography/typography"
+import { Typography } from "@/ui/components/typography/typography"
 import Link from "next/link"
 import { ActiveLink } from "./active-link"
 import clsx from 'clsx'

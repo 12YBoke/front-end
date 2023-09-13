@@ -14,7 +14,7 @@ export const Typography = ({
   return (
     <Component 
       className={
-        clsx(
+        clsx( 
           "",
           className
         )
