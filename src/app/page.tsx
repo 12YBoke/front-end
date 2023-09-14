@@ -26,7 +26,7 @@ export default function Home() {
           <Container>
             <RegisterForm/>
           </Container>
-          <Container>
+          {/* <Container>
             <Typography component="p" className="text-slate-400">
               Vous avez perdu votre QR Code ?
               <br/>Suivez le {' '}
@@ -35,7 +35,7 @@ export default function Home() {
               </span> 
               {' '} pour le recuperer.
             </Typography>
-          </Container>
+          </Container> */}
         </div>
         <div className="md:flex-1 md:h-[89vh] flex md:flex-col md:justify-center items-center">
           <Container>

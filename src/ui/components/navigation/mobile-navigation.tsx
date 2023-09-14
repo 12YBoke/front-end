@@ -56,7 +56,7 @@ export const MobileNavigation = ({ className }: Props) => {
         >
           <nav className="flex flex-col items-start gap-6">
             <Typography component="span"><ActiveLink href="/">Générer le QR code</ActiveLink></Typography>
-            <Typography component="span"><ActiveLink href="/recover-qrcode">Récupérer le QR code</ActiveLink></Typography>
+            {/* <Typography component="span"><ActiveLink href="/recover-qrcode">Récupérer le QR code</ActiveLink></Typography> */}
             <Button><Link href="/admin">Checker le QR code</Link></Button>
           </nav>
         </div>

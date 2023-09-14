@@ -30,7 +30,8 @@ export const Scanner = (props) => {
     return {
       result : {
         data : scanResult,
-        component : <div className='w-full h-full'>Scanner a nouveau</div>
+        component : 
+        <div className='w-full h-full flex items-center justify-center'>Scanner a nouveau</div>
       }
     }
   } else {

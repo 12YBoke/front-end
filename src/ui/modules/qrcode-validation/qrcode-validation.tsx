@@ -9,6 +9,8 @@ import { fetchDataByPhonenumber } from '@/api/fetch-data-by-phonenumber'
 import { Typography } from '@/ui/components/typography/typography'
 import { Button } from '@/components/ui/button'
 import { toast } from '@/components/ui/use-toast'
+import { useRouter } from 'next/navigation'
+import { Link } from 'lucide-react'
 
 export const QrcodeValidation = () => {
   const [encryptedInformation,setEncryptedInformation] = useState<string | null>(null)
@@ -20,6 +22,7 @@ export const QrcodeValidation = () => {
   const [scanned, setScanned] = useState< {scanned: boolean} | undefined >()
   const result = Scanner()
   const qrcodeInformation = result?.result.data
+  const router = useRouter()
   
   useEffect(() => {
     if(qrcodeInformation != null) {
@@ -80,6 +83,10 @@ export const QrcodeValidation = () => {
     }
   } 
 
+  const handleRefresh = () => {
+    router.refresh();
+  };
+
   return (
     <div className='flex flex-col md:flex-row'>
       <div className='bg-slate-50 md:flex-1 h-[50vh] md:h-[90vh] flex flex-col justify-center'>
@@ -133,7 +140,11 @@ export const QrcodeValidation = () => {
                     </Button>
               }
               </div>
-
+              <Button
+                variant="outline"
+              >
+                <Link href="/recover-qrcode">Checker le QR code</Link>
+              </Button>
             </>
             :
             <Typography className='text-slate-400'>Veuillez presenter un QR code valide</Typography>

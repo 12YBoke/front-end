@@ -1,6 +1,5 @@
 'use client'
 
-import { Container } from "../container/container"
 import { Typography } from "@/ui/components/typography/typography"
 import Link from "next/link"
 import { ActiveLink } from "./active-link"
@@ -26,7 +25,7 @@ export const Navigation = ({ className }: Props) => {
         <Typography component="h1" className="font-bold text-3xl"><Link href="/">L2FED</Link></Typography>
         <nav className="flex items-center gap-6">
           <Typography component="span"><ActiveLink href="/">Générer le QR code</ActiveLink></Typography>
-          <Typography component="span"><ActiveLink href="/recover-qrcode">Récupérer le QR code</ActiveLink></Typography>
+          {/* <Typography component="span"><ActiveLink href="/recover-qrcode">Récupérer le QR code</ActiveLink></Typography> */}
           <Button><Link href="/admin">Checker le QR code</Link></Button>
         </nav>
       </div>
