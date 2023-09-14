@@ -4,7 +4,6 @@ import { QrcodeValidation } from "@/ui/modules/qrcode-validation/qrcode-validati
 export default function Home() {
   return (
     <>
-      <Typography>INDEX ADMIN</Typography>
       <QrcodeValidation/>
     </>
   )

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Html5QrcodeScanner } from 'html5-qrcode'
 
-export const Scanner = () => {
+export const Scanner = (props) => {
   const [scanResult, setScanResult] = useState(null)
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export const Scanner = () => {
         width: 250,
         height: 250,
       },
-      fps: 2
+      fps: 10
     })
 
     scanner.render(success, error)
@@ -23,14 +23,23 @@ export const Scanner = () => {
     }
   
     function error(err) {
-      console.log(err);
     }
   }, [])
 
   if(scanResult) {
-    return scanResult
+    return {
+      result : {
+        data : scanResult,
+        component : <div className='w-full h-full'>Scanner a nouveau</div>
+      }
+    }
   } else {
-    return ( <div id='lecteur'></div> )
+    return {
+      result : {
+        data : null,
+        component : <div className='w-full h-full' id='lecteur'></div>
+      }
+    }
   }
 
 }

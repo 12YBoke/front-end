@@ -17,7 +17,6 @@ export const ActiveLink = ({href, children, className}: Props) => {
     return pathname === href
   }, [pathname, href])
   
-
   return (
     <Link
       className={
