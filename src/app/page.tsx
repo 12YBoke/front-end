@@ -30,7 +30,7 @@ export default function Home() {
             <Typography component="p" className="text-slate-400">
               Vous avez perdu votre QR Code ?
               <br/>Suivez le {' '}
-              <span className="cursor-pointer text-slate-800 font-bold rounded">
+              <span className="cursor-pointer text-slate-800 font-bold">
                 <Link href='/recover-qrcode'>lien</Link>
               </span> 
               {' '} pour le recuperer.

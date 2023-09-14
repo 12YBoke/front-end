@@ -5,6 +5,7 @@ export const fetchDataByPhonenumber = async (phonenumber) => {
     .from('user')
     .select('scanned')
     .eq('phonenumber', phonenumber)
+    .single()
 
   if(data) {
     return data
